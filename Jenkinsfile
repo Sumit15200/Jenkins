@@ -5,7 +5,7 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compiling'
-                javac JavaApp.java
+                "javac JavaApp.java"
             }
         }
         
