@@ -5,15 +5,14 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compiling'
-                sh 'javac JavaApp.java'
+                javac JavaApp.java
             }
         }
         
         stage('Run') {
             steps {
                 echo 'Runing Application'
-                sh "java JavaApp"
-            }
+                
         }
    
            
