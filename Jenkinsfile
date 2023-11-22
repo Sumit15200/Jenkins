@@ -1,34 +1,20 @@
-pipeline{
-       
-       agent any
+pipeline {
+    agent any
 
-       stages{
-     
-            stage('Compile'){
-
-               steps{
-                       sh 'javac JavaApp'
-
-               }
-
-
-
+    stages {
+       stage('Comp[ile]') {
+            steps {
+                javac JavaApp
             }
-              stage("Run"){
-
-               steps{
-                       sh 'java JavaApp.java'
-
-               }
-
+        }
+        stage('Run'){
+            steps {
+                java JavaApp
+            }
+            
+        }
 
 
             }
 
        }
-
-
-
-
-
-}
