@@ -2,19 +2,20 @@ pipeline {
     agent any
 
     stages {
-       stage('Comp[ile]') {
+        stage('Compile') {
             steps {
-                javac JavaApp
+                echo 'Compiling'
+                sh 'javac JavaApp.java'
             }
         }
-        stage('Run'){
+        
+        stage('Run') {
             steps {
-                java JavaApp
+                echo 'Runing Application'
+                sh "java JavaApp"
             }
-            
         }
-
-
-            }
-
-       }
+   
+           
+    }
+}
